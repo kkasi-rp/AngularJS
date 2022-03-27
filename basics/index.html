@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Angular JS Basics</title>
+        <script type="text/javascript" src="../lib/angular-1.3.17.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </head>
+    <body ng-app="myApp">
+        <p>{{'Hello '+'World !'}}</p>
+        <div>
+            <p ng-controller="GreetCtrl">{{greetMessage}}</p>
+        </div>
+        <div ng-controller="ListCtrl">
+            <p>{{parent_scope_var}}</p>
+            <p>
+                <ol>
+                    <li ng-repeat="name in names">
+                        {{name | uppercase}}
+                    </li>
+                </ol>
+            </p>
+        </div>
+        <p ng-controller="ClockCtrl">{{count}} : {{clock}}</p>
+    </body>
+</html>
